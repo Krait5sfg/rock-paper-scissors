@@ -48,12 +48,11 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
+function game(gameLength) {
     let scoreCom = 0;
     let scorePl = 0;
-    let gameLength = 5;
 
-    for (let x = 0; x < 5; x++) {
+    for (let x = 0; x < gameLength; x++) {
         let playerSelection = window.prompt('Input Your choice: Rock, Paper or Scissors');
         let result = playRound(playerSelection, computerPlay);
         if (result.search('You Win') === 0) {
@@ -77,4 +76,5 @@ function game() {
 
 }
 
-game();
+//start game 5 times
+game(5);
